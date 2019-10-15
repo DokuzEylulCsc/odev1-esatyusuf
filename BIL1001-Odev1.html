@@ -1,21 +1,47 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html>
+<meta charset="utf-8"/>
 <body>
-<h2>2019 Güz Döneminin ilk ödevi</h2>
-<label for="id1">Metin kutusu 1</label>
-<input type='text' id='id1' /> 
-<br>
-<label for="id2">Metin kutusu 2</label>
-<input type='text' id='id2' /> 
-<br><br>
-<button type="button">Topla</button>
-<br><br>
-<label for="id3">Metin kutusu 3</label>
-<input type='text' id='id3' /> 
-<br>
-<label for="id4">Metin kutusu 4</label>
-<input type='text' id='id4' /> 
-<br><br>
-<button type="button">Yapýþtýr</button>
-</body>
+<h1>Esat Yusuf Dalbudak 2019280023</h1>
+<h2>2019 GÃ¼z DÃ¶neminin ilk Ã¶devi</h2>
+<h2 id='Cevap'></h2>
+<h2 id='Sonuc'></h2>
+<label for="id1">Metin kutusu 1</label> 
+<input type="text" onkeypress='return event.charCode>= 48 &&event.charCode<= 57' id='id1'></input> 
+<br> 
+<label for="id2">Metin kutusu 2</label> 
+<input type="text" onkeypress='return event.charCode>= 48 &&event.charCode<= 57' id='id2'></input>
+<br><br> 
+<button onclick="Topla()">Topla</button>
+<br><br> 
+<label for="id3">Metin kutusu 3</label> 
+<input type='text' id='id3' />  
+<br> 
+<label for="id4">Metin kutusu 4</label> 
+<input type='text' id='id4' />  
+<br><br> 
+<button onclick="Yapistir()">YapÄ±ÅŸtÄ±r</button>
+<script>
+function Topla()
+{
+  var firstbox = document.getElementById("id1").value;
+  var secondbox = document.getElementById("id2").value;
+  var deger = parseFloat(firstbox)+ parseFloat(secondbox);
+  if(!isNaN(deger));
+  {
+    alert(deger);
+  }
+
+}
+function Yapistir()
+{
+  var thirdbox = document.getElementById("id3").value;
+  var fourthbox = document.getElementById("id4").value;
+  var glue = thirdbox.concat(fourthbox)
+  document.getElementById("Cevap").innerHTML="Sonucunuz:"+glue;
+ 
+  alert(glue);
+}
+</script>
+</body> 
 </html>
